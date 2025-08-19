@@ -1,0 +1,86 @@
+img {
+    width: 200px;
+}
+
+.fantasma {
+    width: 130px;
+}
+
+.div-flex {
+    background-color: aqua;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.div-flex2 {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.espacado1 {
+    justify-content: space-between;
+}
+
+.espacado2 {
+    justify-content: space-around;
+}
+
+.centralizado {
+    justify-content: center;
+}
+
+.direita {
+    justify-content: flex-end;
+}
+
+.direita-amarela {
+    justify-content: space-between;
+}
+
+.amarela {
+    background-color: yellow;
+    align-items: center;
+}
+
+.direita-amarelaNovo {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amarelaNovo {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+}
+
+.direita-amarelaNovoF {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amarelaNovoF {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coluna{
+    flex-direction: column;
+    height: 960px;
+    align-items: flex-start;
+}
+
+.coluna2{
+    flex-direction: column;
+    height: 960px;
+    justify-content: space-between;
+}
+
+.lilas{
+    justify-content: space-between;
+    background-color: rgb(218, 146, 240);
+    align-items: center;
+}
