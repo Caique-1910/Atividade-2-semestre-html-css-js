@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 20vh;
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+}
+
+.logo {
+    width: 10%;
+    height: 60%;
+    background-color: white;
+}
+
+nav {
+    width: 30%;
+    height: 60%;
+    background-color: white;
+}
+
+.principal {
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+aside {
+    width: 30vw;
+    background-color: #800020;
+}
+
+main {
+    width: 70vw;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    height: 20vh;
+    background-color: rgb(163, 22, 97);
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+footer {
+    height: 20vh;
+    background-color:#000100;
+    
+}

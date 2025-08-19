@@ -1,0 +1,118 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d0d0d0;
+    color: #FFFFFF;
+    padding: 50px;
+}
+
+.banner {
+    background-image: linear-gradient(180deg, rgba(224, 13, 13, 0), rgb(149, 12, 12)), url("https://picsum.photos/600/300/?blur=1");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 40px;
+    text-align: center;
+}
+
+.banner p {
+    margin: 5px 0 0;
+    color: #d9e6ff;
+}
+
+.banner li {
+    background-color: #a11e0a;
+    list-style: none;
+    margin: 5px 0;
+    display: inline-block;
+    padding: 5px 30px;
+}
+.banner li:hover {
+    background-color: #fd0000;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.destaque {
+    color: #000000;
+}
+
+#especial {
+    background-color: #401212;
+    padding: 5px;
+    border-radius: 30px;
+    width: 500px;
+    margin-left: 500px;
+}
+
+img {
+    max-width: 50%;
+    border-radius: 8px;
+    position: center;
+    margin-left: 400px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid #1d0202;
+    padding: 8px;
+}
+
+th {
+    background-color: #101522;
+}
+
+td {
+    color: #000000;
+}
+
+h2 {
+    color: #aa0909;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.botao {
+    background-color: #a11e0a;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    color: #FFFFFF;
+}
+
+.botao:hover {
+    cursor: pointer;
+    background-color: #4d0808;
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+}
+footer {
+    background-color: #aa0909;
+    text-align: center;
+    padding: 20px;
+    width: 1440px;
+    margin:0 auto;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #3d0303;
+    position: absolute;
+}
