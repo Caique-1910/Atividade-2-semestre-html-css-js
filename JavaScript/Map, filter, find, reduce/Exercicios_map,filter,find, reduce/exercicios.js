@@ -63,7 +63,7 @@
 // const total = valores.reduce((acumulador, auxiliar)=> acumulador + auxiliar, 0)
 // console.log(total)
 
-//Exercicio 2 
+//Exercicio 2
 // const palavras = ["Js ", "e ", "muito ", "legal"]
 // const frase = palavras.reduce((acumulador, auxiliar)=> acumulador + auxiliar, )
 // console.log(frase)
@@ -96,7 +96,7 @@
 //     { produto: "Teclado", preco: 200 }
 //   ];
 // const lista = carrinho.map(auxiliar =>" Produto: " + auxiliar.produto + " R$ " + auxiliar.preco)
-// console.log(lista) 
+// console.log(lista)
 // const total = carrinho.reduce((acumulador, auxiliar)=> acumulador + auxiliar.preco, 0)
 // console.log(total)
 // const encontro = carrinho.find(auxiliar=>auxiliar.produto=="Mouse")

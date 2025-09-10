@@ -95,16 +95,22 @@
 
 
 //Exercicio 4
-// let numero = parseInt(prompt("Digite um numero: "))
-// for (let i = 1; i <= numero; i++) {
-//    let verificaoDeNumeroPerfeito = 0
-//     for (let j = 1; j < i; j++) {
-//          if (i % j === 0) {
-//               verificaoDeNumeroPerfeito += j
-//          }
-//     }
-//     if (verificaoDeNumeroPerfeito === i) {
-//          console.log(i + " é um numero perfeito");
-//     }
 
+// let numeros = parseInt(prompt("Digite um numero: "))
+// let armazenarNumerosPerfeitos = []
+// for (let i = 1; i <= numeros; i++) {
+//      for (let i = 1; i <= numeros; i++) {
+//           let verificaoDeNumeroPerfeito = 0
+//           for (let j = 1; j < i; j++) {
+//                if (i % j === 0) {
+//                     verificaoDeNumeroPerfeito += j
+//                }
+//           }
+//           if (verificaoDeNumeroPerfeito === i) {
+//                armazenarNumerosPerfeitos.push(i)
+//           }
+
+//      }
 // }
+
+// console.log("Numeros perfeitos: " + armazenarNumerosPerfeitos);
