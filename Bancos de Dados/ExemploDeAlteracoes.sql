@@ -1,0 +1,103 @@
+CREATE DATABASE Loja
+
+USE Loja
+
+CREATE TABLE Cliente(
+ClienteId INT IDENTITY(100, 1),
+Nome VARCHAR(100) NOT NULL,
+Email VARCHAR(100) UNIQUE,
+CONSTRAINT Pk_Cliente PRIMARY KEY (ClienteId)
+)
+
+CREATE TABLE Pedido(
+PedidoId INT IDENTITY(100,1),
+DataPedidio DATE NOT NULL,
+Valor DECIMAL (10,2),
+ClienteId INT,
+CONSTRAINT Pk_Pedido PRIMARY KEY (PedidoId),
+CONSTRAINT Fk_Pedidio FOREIGN KEY (ClienteId)
+REFERENCES Cliente(ClienteId)  --ON DELETE CASCADE
+)
+
+INSERT INTO Cliente VALUES
+('Fernandinho', 'fefe@senai.com'),
+('Caca', 'caca@senai.com'),
+('Vanderlei', 'vava@senai.com')
+
+INSERT INTO Pedido VALUES
+('2025-10-02', '100.80', 100),
+('2025-10-03', '101.99', 100),
+('2025-10-04', '200.10', 101)
+
+SELECT * FROM Cliente
+SELECT * FROM Pedido
+
+-- AJUSTAR E-MAIL DE CLIENTE
+UPDATE Cliente SET Email = 'caca62@senai.com'
+WHERE ClienteId = 101
+
+
+-- ATUALIZAR O VALOR DE UM PEDIDO
+SELECT * FROM Pedido
+UPDATE Pedido SET Valor = Valor + '10.00'
+WHERE PedidoId = 101
+SELECT * FROM Pedido
+
+-- RENOMEAR TABELAS
+
+EXEC sp_rename 'Cliente', 'Funcionario'
+
+SELECT * FROM Cliente
+SELECT * FROM Funcionario
+
+
+-- RENOMEAR ATRIBUTOS
+EXEC sp_rename 'Funcionario.ClienteId', 'FuncionarioId', 'COLUMN'
+
+SELECT * FROM Funcionario
+
+
+-- ALTERAR TAMANHO DO TIPO DE DADO
+ALTER TABLE Funcionario
+ALTER COLUMN Nome VARCHAR(150) NOT NULL
+
+-- VER A ESTRUTURA DA TABELA
+EXEC sp_help 'Funcionario'
+
+-- DELETAR UM FUNCIONARIO
+DELETE Pedido
+WHERE FuncionarioId = 100
+
+-- APAGAR A PK PEDIDO
+ALTER TABLE Pedido
+DROP CONSTRAINT Pk_Pedido
+
+
+-- RECRIANDO A PK
+ALTER TABLE Pedido
+ADD CONSTRAINT Pk_Pedido PRIMARY KEY (PedidoId)
+
+-- ALTERAR TABELA PEDIDO
+-- ON DELETE CASCADE
+
+ALTER TABLE Pedido
+DROP CONSTRAINT Fk_Pedido
+
+
+-- RECRIANDO FK COM ON DELETE CASCADE
+
+ALTER TABLE Pedido
+ADD CONSTRAINT Fk_Pedido_Cliente
+FOREIGN KEY (ClienteId) REFERENCES Funcionario(FuncionarioId)
+ON DELETE CASCADE
+
+DELETE Funcionario 
+WHERE FuncionarioId = 105
+
+-- ADICIONAR NOVAS ALTER
+
+COLUNAS TABLE Funcionario
+ADD Cargo VARCHAR(50)
+
+SELECT * FROM Funcionario
+SELECT * FROM Pedido
