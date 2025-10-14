@@ -38,3 +38,47 @@ SELECT YEAR(DataPedido) AS Ano, MONTH(DataPedido) AS Mes FROM Pedido
 
 --10
 SELECT nome, DataCadastro, DATEDIFF(YY, DataCadastro  , GETDATE()) AS AnosCadastrados FROM Cliente
+
+--11
+SELECT DataPedido, DATEADD(day, 30, DataPedido ) AS DataEntregaPrevista FROM Pedido
+
+--12
+SELECT DataPedido, DATENAME(WEEKDAY, DataPedido) AS DiaSemana FROM Pedido
+
+--Funcoes de Agregacao
+
+--13
+SELECT SUM(QuantidadeEstoque) AS EstoqueTotal FROM Produto
+
+--14
+SELECT AVG(CAST(preco AS FLOAT)) AS PrecoMedio FROM Produto
+
+--15
+SELECT MAX(preco) AS PrecoMaximo, MIN(preco) AS PrecoMinimo FROM Produto
+
+--16
+SELECT COUNT(*) AS QuantidadePedido FROM Pedido
+
+--Consultas com GROUP BY
+
+--17
+SELECT c.nome, COUNT(*) AS PedidosRealizados FROM Pedido p
+JOIN Cliente c ON c.ClienteID = p.ClienteID
+GROUP BY c.Nome
+
+--18
+SELECT c.Nome, COUNT(p.QuantidadeEstoque) AS Total FROM Produto p
+JOIN Categoria c ON c.CategoriaId = p.CategoriaID
+GROUP BY c.Nome
+
+--19
+SELECT Nome, COUNT(*) AS NumeroProduto FROM Categoria
+GROUP BY Nome
+
+--20
+SELECT sp.Nome, SUM(p.ValorTotal) AS ValorTotal FROM StatusPedido sp
+JOIN Pedido p ON p.StatusID = sp.StatusId
+GROUP BY sp.Nome
+
+
+
